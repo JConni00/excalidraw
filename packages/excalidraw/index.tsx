@@ -267,6 +267,12 @@ export { convertToExcalidrawElements } from "./data/transform";
 export { getCommonBounds, getVisibleSceneBounds } from "./element/bounds";
 
 export {
+  actionChangeFontSize,
+  actionIncreaseFontSize,
+  actionChangeFontFamily
+} from "./actions";
+
+export {
   elementsOverlappingBBox,
   isElementInsideBBox,
   elementPartiallyOverlapsWithOrContainsBBox,

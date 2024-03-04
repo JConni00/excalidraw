@@ -12,6 +12,9 @@ export const DarkModeToggle = (props: {
   onChange: (value: Theme) => void;
   title?: string;
 }) => {
+
+  return <></>
+
   const title =
     props.title ||
     (props.value === "dark" ? t("buttons.lightMode") : t("buttons.darkMode"));
