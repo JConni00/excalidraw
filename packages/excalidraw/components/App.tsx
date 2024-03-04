@@ -632,12 +632,8 @@ class App extends React.Component<AppProps, AppState> {
       gridModeEnabled = false,
       objectsSnapModeEnabled = false,
       theme = defaultAppState.theme,
-<<<<<<< HEAD
-      name = defaultAppState.name,
-      scrollConstraints,
-=======
       name = `${t("labels.untitled")}-${getDateTime()}`,
->>>>>>> master
+      scrollConstraints,
     } = props;
 
     this.state = {
@@ -2636,15 +2632,11 @@ class App extends React.Component<AppProps, AppState> {
 
   componentDidUpdate(prevProps: AppProps, prevState: AppState) {
     this.updateEmbeddables();
-<<<<<<< HEAD
-    const elementsIncludingDeleted = this.scene.getElementsIncludingDeleted();
-    if (!this.state.showWelcomeScreen && !elementsIncludingDeleted.length) {
-=======
+
     const elements = this.scene.getElementsIncludingDeleted();
     const elementsMap = this.scene.getNonDeletedElementsMap();
 
     if (!this.state.showWelcomeScreen && !elements.length) {
->>>>>>> master
       this.setState({ showWelcomeScreen: true });
     }
 
@@ -2804,12 +2796,7 @@ class App extends React.Component<AppProps, AppState> {
         elementsMap,
       );
     }
-<<<<<<< HEAD
-
-    this.history.record(this.state, this.scene.getElementsIncludingDeleted());
-=======
     this.history.record(this.state, elements);
->>>>>>> master
 
     // Do not notify consumers if we're still loading the scene. Among other
     // potential issues, this fixes a case where the tab isn't focused during
