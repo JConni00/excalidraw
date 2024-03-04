@@ -185,7 +185,7 @@ const offsetElementAfterFontResize = (
   );
 };
 
-const changeFontSize = (
+export const changeFontSize = (
   elements: readonly ExcalidrawElement[],
   appState: AppState,
   app: AppClassProperties,

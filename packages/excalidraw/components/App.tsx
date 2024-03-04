@@ -665,6 +665,8 @@ class App extends React.Component<AppProps, AppState> {
         getSceneElements: this.getSceneElements,
         getAppState: () => this.state,
         getFiles: () => this.files,
+        getApp: () => this,
+        actionManager: this.actionManager,
         getName: this.getName,
         registerAction: (action: Action) => {
           this.actionManager.registerAction(action);
